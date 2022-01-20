@@ -1,0 +1,14 @@
+version: '3'
+services:
+  aws-cli:
+    container_name: 'aws-cli'
+    build:
+      context: ./
+      dockerfile: ./aws-cli/Dockerfile
+    tty: true
+    env_file: conf/.env
+    volumes:
+      - ./conf/.bashrc:/root/.bashrc
+      - ./script/login-aws.py:/root/login-aws.py
+      - ./src:/var/www/src
+      - /var/run/docker.sock:/var/run/docker.sock
