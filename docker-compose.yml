@@ -9,6 +9,7 @@ services:
     env_file: conf/.env
     volumes:
       - ./conf/.bashrc:/root/.bashrc
+      - ./conf/.ssh:/root/.ssh
       - ./script/login-aws.py:/root/login-aws.py
       - ./src:/var/www/src
       - /var/run/docker.sock:/var/run/docker.sock
