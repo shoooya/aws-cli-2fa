@@ -27,6 +27,17 @@ entry aws-cli container
 $ docker-compose exec aws-cli bash
 ```
 
+## ssh / scp to EC2 (session manager)
+### ssh
+```
+ssh {user}@{instance_id}
+```
+
+### scp
+```
+scp {local_file_path} root@{instance_id}:{ec2 directory path}
+```
+
 ## tips
 Decode Command
 ```
